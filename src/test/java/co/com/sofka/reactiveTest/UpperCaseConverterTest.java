@@ -15,7 +15,7 @@ public class UpperCaseConverterTest {
                 .then(() -> testPublisher.emit("datos", "GeNeRaDoS", "Sofka"))
                 .expectNext("DATOS", "GENERADOS", "SOFKA")
                 .verifyComplete();
-        
+
         TestPublisher
                 .createNoncompliant(TestPublisher.Violation.ALLOW_NULL)
                 .emit("1", "2", null, "3");
