@@ -53,7 +53,7 @@ class ServicioTest {
     }
 
     @Test
-    void afirmaciones() {
+    void testAfirmaciones() {
         Flux<Integer> source = servicio.afirmaciones();
         StepVerifier
                 .create(source)
